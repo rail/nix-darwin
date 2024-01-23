@@ -6,18 +6,20 @@
     username = "rail";
     homeDirectory = "/Users/rail";
     packages = with pkgs; [
-      mosh
-      skopeo
-      fd
-      wget
-      buildifier
-      google-cloud-sdk
       bazelisk
-      temurin-bin
+      buildifier
       ctags
-      gnupatch
+      fd
       gnugrep
+      gnupatch
+      google-cloud-sdk
       gum
+      mc
+      mosh
+      packer
+      skopeo
+      temurin-bin
+      wget
       # terraform
     ];
   };
@@ -40,11 +42,15 @@
   programs.awscli.enable = true;
   programs.bat.enable = true;
   programs.fzf.enable = true;
+  programs.fzf.enableZshIntegration = true;
   programs.go.enable = true;
   programs.jq.enable = true;
-  programs.neovim.enable = true;
-  programs.neovim.viAlias = true;
-  programs.neovim.vimAlias = true;
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+  };
   programs.ripgrep.enable = true;
 
   home.file."bin/bazel" = {
