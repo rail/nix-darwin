@@ -57,5 +57,6 @@
     source = "${pkgs.bazelisk}/bin/bazelisk";
     executable = true;
   };
+  # home.file."bin/goroot".source = config.lib.file.mkOutOfStoreSymlink "${pkgs.go}/share/go";
   imports = [ ./modules ];
 }
