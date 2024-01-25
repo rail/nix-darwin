@@ -44,6 +44,9 @@
       gc = {
         auto = "0";
       };
+      init = {
+        defaultBranch = "main";
+      };
       core = {
         # In order to support UseKeychain, we have to use the system-wide version of ssh
         sshCommand = "/usr/bin/ssh";

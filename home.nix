@@ -5,26 +5,25 @@
     stateVersion = "23.11";
     username = "rail";
     homeDirectory = "/Users/rail";
-    packages = with pkgs; [
-      bazelisk
-      buildifier
-      ctags
-      fd
-      gnugrep
-      gnupatch
-      google-cloud-sdk
-      gum
-      mc
-      mosh
-      packer
-      skopeo
-      temurin-bin
-      wget
-      # terraform
-    ];
   };
-  programs.home-manager.enable = true;
+  home.packages = with pkgs; [
+    buildifier
+    ctags
+    fd
+    gnugrep
+    gnupatch
+    google-cloud-sdk
+    gum
+    mc
+    mosh
+    packer
+    skopeo
+    temurin-bin
+    wget
+    # terraform
+  ];
 
+  programs.home-manager.enable = true;
   programs.bash = {
     enable = true;
     enableCompletion = true;
@@ -53,6 +52,7 @@
   };
   programs.ripgrep.enable = true;
 
+  # A hack to pretend bazelisk is bazel
   home.file."bin/bazel" = {
     source = "${pkgs.bazelisk}/bin/bazelisk";
     executable = true;
