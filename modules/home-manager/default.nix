@@ -59,5 +59,5 @@
     executable = true;
   };
   # home.file."bin/goroot".source = config.lib.file.mkOutOfStoreSymlink "${pkgs.go}/share/go";
-  imports = [ ./modules ];
+  imports = [ ./git.nix ./zsh.nix ];
 }
