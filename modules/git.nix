@@ -1,6 +1,7 @@
 { pkgs, ... }: {
 
   programs.gh.enable = true;
+  programs.gh-dash.enable = true;
 
   programs.git = {
     enable = true;
@@ -15,7 +16,7 @@
       ".vscode/"
     ];
     aliases = {
-      addall = "add -A";
+      ada = "add -A";
       ci = "commit -v";
       br = "branch";
       st = "status";
@@ -32,27 +33,16 @@
       wip = "for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads";
     };
     extraConfig = {
-      rerere = {
-	      enabled = true;
-      };
-      pull = {
-        rebase = true;
-      };
-      github = {
-        user = "rail";
-      };
-      gc = {
-        auto = "0";
-      };
-      init = {
-        defaultBranch = "main";
-      };
+      rerere.enabled = true;
+      pull.rebase = true;
+      github.user = "rail";
+      gc.auto = "0";
+      init.defaultBranch = "main";
       core = {
         # In order to support UseKeychain, we have to use the system-wide version of ssh
         sshCommand = "/usr/bin/ssh";
     	  autocrlf = "input";
         safecrlf = true;
-
       };
       url = {
         "git@github.com:cockroachlabs" = {

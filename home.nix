@@ -18,7 +18,6 @@
     mosh
     packer
     skopeo
-    temurin-bin
     wget
     # terraform
   ];
@@ -51,6 +50,8 @@
     vimAlias = true;
   };
   programs.ripgrep.enable = true;
+  programs.java.enable = true;
+  programs.java.package = pkgs.temurin-bin;
 
   # A hack to pretend bazelisk is bazel
   home.file."bin/bazel" = {
