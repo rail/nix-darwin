@@ -19,7 +19,7 @@
     packer
     skopeo
     wget
-    # terraform
+    tfswitch
   ];
 
   programs.home-manager.enable = true;
