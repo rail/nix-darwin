@@ -1,6 +1,5 @@
 { pkgs, ... }: {
 
-  home.file.".p10k.zsh".source = ./p10k.zsh;
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
@@ -12,8 +11,6 @@
       COMPLETION_WAITING_DOTS = "true";
     };
     initExtra = ''
-      source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
       export PATH=~/bin:~/go/bin:$PATH
       # See https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
       export USE_GKE_GCLOUD_AUTH_PLUGIN=True
@@ -49,6 +46,21 @@
   programs.zsh.oh-my-zsh = {
     enable = true;
     plugins = ["zoxide"];
+  };
+
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+    enableTransience = true;
+    settings = {
+      aws.disabled = true;
+      gcloud.disabled = true;
+      golang.disabled = true;
+      docker_context.disabled = true;
+      git_branch.format = "[$symbol$branch(:$remote_branch)]($style)";
+      directory.truncate_to_repo = false;
+      directory.truncation_symbol = "…/";
+    };
   };
 }
 
