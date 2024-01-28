@@ -1,5 +1,4 @@
-{ pkgs, ... }: {
-
+{pkgs, ...}: {
   programs.gh.enable = true;
   programs.gh-dash.enable = true;
 
@@ -41,7 +40,7 @@
       core = {
         # In order to support UseKeychain, we have to use the system-wide version of ssh
         sshCommand = "/usr/bin/ssh";
-    	  autocrlf = "input";
+        autocrlf = "input";
         safecrlf = true;
       };
       url = {
@@ -50,7 +49,6 @@
         };
       };
     };
-
   };
 
   programs.git.delta = {
@@ -64,5 +62,4 @@
       };
     };
   };
-
 }

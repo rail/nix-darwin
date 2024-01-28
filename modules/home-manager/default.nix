@@ -1,5 +1,5 @@
-{ pkgs, ... }: {
-  nixpkgs.config.allowUnfreePredicate = (pkg: true);
+{pkgs, ...}: {
+  nixpkgs.config.allowUnfreePredicate = pkg: true;
   # This is required information for home-manager to do its job
   home = {
     stateVersion = "23.11";
@@ -59,5 +59,5 @@
     executable = true;
   };
   # home.file."bin/goroot".source = config.lib.file.mkOutOfStoreSymlink "${pkgs.go}/share/go";
-  imports = [ ./git.nix ./zsh.nix ];
+  imports = [./git.nix ./zsh.nix];
 }

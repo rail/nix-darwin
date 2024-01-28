@@ -9,11 +9,16 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }: {
+  outputs = {
+    nixpkgs,
+    home-manager,
+    ...
+  }: {
+    formatter.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.pkgs.alejandra;
     homeConfigurations = {
       "rail" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-        modules = [ ./modules/home-manager ];
+        modules = [./modules/home-manager];
       };
     };
   };
