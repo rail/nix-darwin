@@ -5,6 +5,7 @@
     enableCompletion = true;
     shellAliases = {
       tree = "eza --tree";
+      nixup = "pushd ~/nix/config && nix flake update && home-manager switch --flake . && popd";
     };
     localVariables = {
       COMPLETION_WAITING_DOTS = "true";
