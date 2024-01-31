@@ -11,7 +11,7 @@
       COMPLETION_WAITING_DOTS = "true";
     };
     initExtra = ''
-      export PATH=~/bin:~/go/bin:$PATH
+      export PATH=~/bin:~/go/bin:~/.rd/bin:$PATH
       # See https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
       export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
