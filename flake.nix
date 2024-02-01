@@ -13,11 +13,16 @@
     nixpkgs,
     home-manager,
     ...
-  }: {
-    formatter.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.pkgs.alejandra;
+  }: 
+  let
+    system = "aarch64-darwin";
+    username = "rail";
+  in {
+    formatter.${system} = nixpkgs.legacyPackages.${system}.pkgs.alejandra;
     homeConfigurations = {
-      "rail" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.aarch64-darwin;
+      ${username} = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system};
+        extraSpecialArgs = { inherit username; };
         modules = [./modules/home-manager];
       };
     };

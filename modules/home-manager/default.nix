@@ -1,10 +1,10 @@
-{pkgs, ...}: {
+{pkgs, username, ...}: {
   nixpkgs.config.allowUnfreePredicate = pkg: true;
   # This is required information for home-manager to do its job
   home = {
+    inherit username;
     stateVersion = "23.11";
-    username = "rail";
-    homeDirectory = "/Users/rail";
+    homeDirectory = "/Users/${username}";
   };
   home.packages = with pkgs; [
     buildifier
