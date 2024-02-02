@@ -63,5 +63,10 @@
     executable = true;
   };
   # home.file."bin/goroot".source = config.lib.file.mkOutOfStoreSymlink "${pkgs.go}/share/go";
+  # Manage some configs
+  home.file.".config" = {
+    source = ./config;
+    recursive = true;
+  };
   imports = [./git.nix ./zsh.nix];
 }
