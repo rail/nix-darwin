@@ -1,4 +1,8 @@
-{pkgs, username, ...}: {
+{
+  pkgs,
+  username,
+  ...
+}: {
   nixpkgs.config.allowUnfreePredicate = pkg: true;
   # This is required information for home-manager to do its job
   home = {

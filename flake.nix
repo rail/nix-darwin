@@ -13,8 +13,7 @@
     nixpkgs,
     home-manager,
     ...
-  }: 
-  let
+  }: let
     system = "aarch64-darwin";
     username = "rail";
   in {
@@ -22,7 +21,7 @@
     homeConfigurations = {
       ${username} = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
-        extraSpecialArgs = { inherit username; };
+        extraSpecialArgs = {inherit username;};
         modules = [./modules/home-manager];
       };
     };
