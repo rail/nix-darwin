@@ -20,8 +20,6 @@
     gum
     mc
     mosh
-    packer
-    skopeo
     wget
     tfswitch
   ];

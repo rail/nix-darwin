@@ -21,6 +21,22 @@ local config = {
   colorscheme = "nightfox",
   plugins = {
     { "EdenEast/nightfox.nvim" },
+    { "AstroNvim/astrocommunity",
+      { import = "astrocommunity.pack.go" },
+    },
+    { "folke/twilight.nvim",
+      keys = { { "<leader>uT", "<cmd>Twilight<cr>", desc = "Toggle Twilight" } },
+      cmd = { "Twilight", "TwilightEnable", "TwilightDisable" },
+    },
+    { "folke/trouble.nvim",
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+      cmd = { "Trouble", "TroubleToggle"},
+    },
+    { "folke/todo-comments.nvim",
+      dependencies = { "nvim-lua/plenary.nvim" },
+      event = "User AstroFile",
+      opts = {},
+    },
   },
 
   polish = function()

@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   programs.gh.enable = true;
   programs.gh-dash.enable = true;
+  programs.lazygit.enable = true;
 
   programs.git = {
     enable = true;
