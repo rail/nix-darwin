@@ -36,6 +36,5 @@ home-manager switch --flake .
 To remove old generations
 
 ```shell
-home-manager expire-generations "-7 days"
-nix-store --gc
+nix-collect-garbage --delete-older-than 7
 ```
