@@ -50,6 +50,9 @@ local config = {
       cmd = { "ZenMode" },
       keys = { { "<leader>uz", "<cmd>ZenMode<cr>", desc = "Toggle Zen Mode"} },
     },
+    { "mbbill/undotree",
+      keys = { { "<leader>uU", "<cmd>UndotreeToggle<cr>", desc = "Toggle Undo Tree" } },
+    },
   },
 
   polish = function()
