@@ -1,0 +1,38 @@
+
+plugins = {
+  { "EdenEast/nightfox.nvim" },
+  { "AstroNvim/astrocommunity",
+    { import = "astrocommunity.pack.go" },
+  },
+  { "folke/twilight.nvim",
+    keys = { { "<leader>uT", "<cmd>Twilight<cr>", desc = "Toggle Twilight" } },
+    cmd = { "Twilight", "TwilightEnable", "TwilightDisable" },
+  },
+  { "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    cmd = { "Trouble", "TroubleToggle"},
+  },
+  { "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    event = "User AstroFile",
+    opts = {},
+  },
+  { "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {},
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    },
+  },
+  { "folke/zen-mode.nvim",
+    opts = {},
+    cmd = { "ZenMode" },
+    keys = { { "<leader>uz", "<cmd>ZenMode<cr>", desc = "Toggle Zen Mode"} },
+  },
+  { "mbbill/undotree",
+    keys = { { "<leader>uU", "<cmd>UndotreeToggle<cr>", desc = "Toggle Undo Tree" } },
+  },
+}
+
+return plugins
