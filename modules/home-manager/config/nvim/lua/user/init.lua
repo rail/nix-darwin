@@ -45,6 +45,11 @@ local config = {
         "rcarriga/nvim-notify",
       },
     },
+    { "folke/zen-mode.nvim",
+      opts = {},
+      cmd = { "ZenMode" },
+      keys = { { "<leader>uz", "<cmd>ZenMode<cr>", desc = "Toggle Zen Mode"} },
+    },
   },
 
   polish = function()
