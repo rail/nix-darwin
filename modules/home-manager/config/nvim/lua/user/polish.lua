@@ -1,4 +1,3 @@
-
 remember_last_position = function()
   vim.api.nvim_create_autocmd(
     { "BufReadPost" },
@@ -13,7 +12,8 @@ remember_last_position = function()
   )
 end
 
-
-return function()
+polish = function()
   remember_last_position()
 end
+
+return polish

@@ -1,6 +1,4 @@
-
 plugins = {
-  { "EdenEast/nightfox.nvim" },
   { "AstroNvim/astrocommunity",
     { import = "astrocommunity.pack.go" },
   },
