@@ -22,6 +22,11 @@
     mosh
     wget
     tfswitch
+    # nix stuff
+    alejandra
+    deadnix
+    statix
+    cargo
   ];
 
   programs.home-manager.enable = true;

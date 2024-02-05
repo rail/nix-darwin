@@ -1,6 +1,7 @@
 plugins = {
   { "AstroNvim/astrocommunity",
     { import = "astrocommunity.pack.go" },
+    { import = "astrocommunity.pack.nix" },
   },
   { "folke/twilight.nvim",
     keys = { { "<leader>uT", "<cmd>Twilight<cr>", desc = "Toggle Twilight" } },
