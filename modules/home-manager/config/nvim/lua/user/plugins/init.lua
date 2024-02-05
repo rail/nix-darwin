@@ -1,9 +1,7 @@
 plugins = {
   { "AstroNvim/astrocommunity",
-    { import = "astrocommunity.pack.docker" },
     { import = "astrocommunity.pack.go" },
     { import = "astrocommunity.pack.nix" },
-    { import = "astrocommunity.pack.yaml" },
   },
   { "folke/twilight.nvim",
     keys = { { "<leader>uT", "<cmd>Twilight<cr>", desc = "Toggle Twilight" } },
