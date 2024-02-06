@@ -13,6 +13,11 @@
   home.packages = with pkgs; [
     buildifier
     ctags
+    # Go stuff
+    delve
+    cobra-cli
+    gopls
+    #
     fd
     gnugrep
     gnupatch
