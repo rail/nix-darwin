@@ -57,7 +57,7 @@
       gcloud.disabled = true;
       golang.disabled = true;
       docker_context.disabled = true;
-      git_branch.format = "[$symbol$branch(:$remote_branch)]($style)";
+      git_branch.format = "[$symbol$branch(:$remote_branch)]($style) ";
       directory.truncate_to_repo = false;
       directory.truncation_symbol = "…/";
     };
