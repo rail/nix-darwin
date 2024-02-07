@@ -5,7 +5,7 @@ remember_last_position = function()
       callback = function(opts)
         ft = vim.bo[opts.buf].filetype
         if ft:match('commit') or ft:match('rebase') then
-         return
+          return
         end
         local row, col = unpack(vim.api.nvim_buf_get_mark(0, "\""))
         if {row, col} ~= {0, 0} then
