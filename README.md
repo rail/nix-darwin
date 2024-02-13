@@ -8,12 +8,20 @@
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 ```
 
-2. Modify the files in this directory
-
-3. Initial setup
+2. Install nix-darwin
 
 ```shell
-nix run github:nix-community/home-manager -- switch --flake .
+nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A uninstaller
+./result/bin/darwin-uninstaller
+rm result
+```
+
+3. Modify the files in this directory
+
+4. Initial setup
+
+```shell
+nix run nix-darwin -- switch --flake .
 ```
 
 Done.
@@ -22,7 +30,7 @@ If you change the contents of this directory
 
 ```shell
 git add .
-home-manager switch --flake .
+nix run nix-darwin -- switch --flake .
 ```
 
 To update packages
@@ -30,7 +38,7 @@ To update packages
 ```shell
 nix flake update
 git add .
-home-manager switch --flake .
+nix run nix-darwin -- switch --flake .
 ```
 
 To remove old generations
