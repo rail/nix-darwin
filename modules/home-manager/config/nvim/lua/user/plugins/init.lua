@@ -24,6 +24,12 @@ plugins = {
     "lewis6991/gitsigns.nvim",
     keys = { { "<leader>gT", "<cmd>Gitsigns toggle_current_line_blame<cr>"}, desc = "Toggle current line blame" },
   },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
 }
 
 return plugins
