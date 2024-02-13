@@ -20,9 +20,6 @@ plugins = {
       "rcarriga/nvim-notify",
     },
   },
-  { "mbbill/undotree",
-    keys = { { "<leader>uU", "<cmd>UndotreeToggle<cr>", desc = "Toggle Undo Tree" } },
-  },
   {
     "lewis6991/gitsigns.nvim",
     keys = { { "<leader>gT", "<cmd>Gitsigns toggle_current_line_blame<cr>"}, desc = "Toggle current line blame" },
