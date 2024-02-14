@@ -32,6 +32,7 @@
     deadnix
     statix
     cargo
+    nix-output-monitor
   ];
 
   programs.home-manager.enable = true;

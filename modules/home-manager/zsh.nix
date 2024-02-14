@@ -5,7 +5,7 @@
     enableCompletion = true;
     shellAliases = {
       tree = "eza --tree";
-      nixup = "pushd ~/nix/config && nix flake update && nix run nix-darwin -- switch --flake . && popd";
+      nixup = "pushd ~/nix/config && nix flake update && nix run nix-darwin -- switch --flake . |& nom && popd";
     };
     localVariables = {
       COMPLETION_WAITING_DOTS = "true";

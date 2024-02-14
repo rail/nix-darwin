@@ -28,6 +28,7 @@
       nw = "!f() { git worktree add --track -b \"$1\" \"../$1\" \"origin/$(git defbranch)\"; }; f";
       lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative";
       ll = "log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --numstat --date=relative";
+      shw = "show --format=format:'commit %H %d%nAuthor: %an <%ae>%nDate: %aD%n%n%B'";
       dc = "diff --cached";
       unstage = "reset HEAD --";
       wip = "for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads";
