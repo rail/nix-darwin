@@ -33,6 +33,9 @@
     statix
     cargo
     nix-output-monitor
+    # js
+    corepack
+    nodejs
   ];
 
   programs.home-manager.enable = true;
