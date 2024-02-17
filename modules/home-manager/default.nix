@@ -27,6 +27,7 @@
     mosh
     wget
     tfswitch
+    terraform-ls
     # nix stuff
     alejandra
     deadnix

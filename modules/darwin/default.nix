@@ -27,8 +27,6 @@
     auto-optimise-store = false;
   };
 
-  homebrew.enable = true;
-
   # enable touch id for shell sudo \o/
   security.pam.enableSudoTouchIdAuth = true;
 
