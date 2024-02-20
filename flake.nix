@@ -25,6 +25,7 @@
     hostname = "crlMBP-M7X0LWQFJ6MzA4";
     specialArgs = inputs // {inherit username system;};
   in {
+    legacyPackages.aarch64-darwin = nixpkgs.legacyPackages.${system};
     formatter.${system} = nixpkgs.legacyPackages.${system}.pkgs.alejandra;
     darwinConfigurations.${hostname} = nix-darwin.lib.darwinSystem {
       inherit system specialArgs;

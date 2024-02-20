@@ -59,6 +59,7 @@
   programs.fzf.enable = true;
   programs.fzf.enableZshIntegration = true;
   programs.go.enable = true;
+  programs.go.package = pkgs.go_1_22;
   programs.jq.enable = true;
   programs.neovim = {
     enable = true;
